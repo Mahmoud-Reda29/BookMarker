@@ -37,7 +37,7 @@ function display() {
      for (var i = 0; i < bookMarks.length; i++) {
           bookmarksBox += `
           <tr>
-               <th scope="row">${i}</th>
+               <th scope="row">${i+1}</th>
                <td>${bookMarks[i].name}</td>
                <td><button class="btn btn-success text-light"><i class="fa-solid fa-eye me-2"></i> <a
                href="//${bookMarks[i].url}" target="_blank">Visit</a></button></td>
