@@ -8,9 +8,9 @@
 body {
   background-color: #f7ecde;
 }
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
 }
 .page-heading {
   font-family: "Pacifico", cursive;
@@ -20,7 +20,7 @@ a{
 .page-heading::before {
   content: "";
   position: absolute;
-  width: 24%;
+  width: 20%;
   height: 30%;
   background-color: #fec260;
   bottom: 9px;
@@ -31,6 +31,17 @@ a{
 }
 .page-heading:hover::before {
   height: 50%;
+}
+
+@media (width<768px) {
+  .page-heading::before {
+    width: 60%;
+  }
+}
+@media (768px<width) {
+  .page-heading::before {
+    width: 26%;
+  }
 }
 .bookmarker-content {
   border-width: 2px 0px;
@@ -72,8 +83,7 @@ a{
   box-shadow: 0 0 0 0.25rem #fec26055;
 }
 .bookmarker-content form button {
-  padding: 15px;
-  width: 15%;
+  padding: 15px 30px;
   position: relative;
   left: 50%;
   transform: translate(-50%);
@@ -86,6 +96,6 @@ a{
 .btn-primary:hover {
   background-color: #d1512d;
 }
-.bookmarker-table table{
-    vertical-align: middle;
+.bookmarker-table table {
+  vertical-align: middle;
 }
