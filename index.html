@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <title>BookMarker</title>
 </head>
 
@@ -29,11 +30,12 @@
                                 class="fa-solid fa-book-bookmark"></i> Site Name</label>
                         <input type="text" placeholder="BookMark Name" name="bookmark-name" id="bookmark-name"
                             class="form-control mb-4">
-                        <label for="Website-Url" class="d-block fw-semibold pb-3"><i
-                                class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                        <label for="Website-Url" class="d-block fw-semibold pb-3">
+                            <i class="fa-solid fa-link"></i> Website URL</label>
                         <input type="url" placeholder="Website Url" name="Website-Url" id="Website-Url"
                             class="form-control mb-4 ">
-                        <button type="submit" onclick="addBookmark()" class="btn btn-primary my-3 fw-bold">Submit</button>
+                        <button type="submit" onclick="addBookmark()"
+                            class="btn btn-primary my-3 fw-bold">Submit</button>
                     </form>
                 </div>
                 <div class="bookmarker-table">
@@ -47,7 +49,7 @@
                             </tr>
                         </thead>
                         <tbody class="table-group-divider" id="bookmarker-table-body">
-                            
+
                         </tbody>
                     </table>
                 </div>

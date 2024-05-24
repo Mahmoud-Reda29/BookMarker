@@ -24,12 +24,12 @@ function addBookmark() {
      }
      if (validateUrl(bookmark.url)) {
           bookMarks.push(bookmark)
+          localStorage.setItem('bookmark', JSON.stringify(bookMarks))
+          display();
+          resetFields();
      } else {
           alert("Please Enter A Valid URL")
      }
-     localStorage.setItem('bookmark', JSON.stringify(bookMarks))
-     display();
-     resetFields();
 }
 
 function display() {
@@ -39,7 +39,7 @@ function display() {
           <tr>
                <th scope="row">${i}</th>
                <td>${bookMarks[i].name}</td>
-               <td><button class="btn btn-info text-light"><i class="fa-solid fa-eye me-2"></i> <a
+               <td><button class="btn btn-success text-light"><i class="fa-solid fa-eye me-2"></i> <a
                href="//${bookMarks[i].url}" target="_blank">Visit</a></button></td>
                <td><button class="btn btn-danger text-light" onclick="deleteBookmark(${i})"><i class="fa-solid fa-trash-can me-2"></i> <a
                href="">Delete</a> </button></td>
@@ -59,3 +59,4 @@ function deleteBookmark(index) {
     display();
     localStorage.setItem('bookmark', JSON.stringify(bookMarks))
 }
+
